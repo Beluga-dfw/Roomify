@@ -1,0 +1,38 @@
+.rec-card {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--clr-card);
+  border-radius: 8px;
+  padding: 12px 16px;
+  cursor: pointer;
+  box-shadow: 0 2px 6px var(--clr-shadow);
+  transition: box-shadow .2s, transform .2s;
+}
+
+.rec-card:hover {
+  box-shadow: 0 4px 12px var(--clr-shadow);
+  transform: translateY(-2px);
+}
+
+.rec-icon {
+  font-size: 1.25rem;
+  color: var(--clr-primary);
+}
+
+.rec-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.rec-title {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--clr-text);
+}
+
+.rec-price {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--clr-accent);
+}

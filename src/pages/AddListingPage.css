@@ -1,0 +1,174 @@
+:root {
+  --bg: #f7f7f7;
+  --card: #fff;
+  --primary: #388bff;
+  --text: #333;
+  --light: #ddd;
+  --shadow: rgba(0,0,0,0.1);
+  --space: 16px;
+  --radius: 8px;
+}
+
+.wizard-page {
+  background: var(--bg);
+  min-height: 100vh;
+  padding: var(--space);
+  font-family: 'Inter', sans-serif;
+  color: var(--text);
+}
+.wizard-page h1 {
+  text-align: center;
+  margin-bottom: var(--space);
+}
+
+/* Progress */
+.progress-bar {
+  display: flex;
+  justify-content: center;
+  gap: var(--space);
+  margin-bottom: var(--space);
+}
+.step-indicator {
+  width: 32px; height: 32px;
+  border: 2px solid var(--light);
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  color: var(--light);
+  background: var(--bg);
+}
+.step-indicator.active {
+  border-color: var(--primary);
+  background: var(--primary);
+  color: #fff;
+}
+
+/* Form */
+.wizard-form {
+  max-width: 900px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space);
+}
+.step-card {
+  background: var(--card);
+  border-radius: var(--radius);
+  padding: var(--space);
+  box-shadow: 0 2px 8px var(--shadow);
+}
+.step-card h2 {
+  margin-bottom: var(--space);
+  border-bottom: 1px solid var(--light);
+  padding-bottom: 8px;
+}
+
+/* Labels */
+label {
+  display: flex; flex-direction: column;
+  margin-bottom: var(--space);
+}
+label input, label textarea, label select {
+  margin-top: 8px;
+  padding: 8px;
+  border: 1px solid var(--light);
+  border-radius: var(--radius);
+}
+label textarea { min-height:80px; resize:vertical; }
+
+/* Grids */
+.grid-4 {
+  display: grid;
+  grid-template-columns: repeat(auto-fill,minmax(180px,1fr));
+  gap: var(--space);
+}
+.grid-2 {
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  gap: var(--space);
+}
+
+/* Type chooser */
+.type-grid {
+  display: flex; gap: var(--space);
+}
+.type-item {
+  flex:1;
+  padding: var(--space);
+  background: var(--bg);
+  border:2px solid var(--light);
+  border-radius: var(--radius);
+  text-align: center;
+  cursor: pointer;
+  transition: border-color .2s, background .2s;
+}
+.type-item.sel {
+  border-color: var(--primary);
+  background: #fff;
+}
+.type-item svg { font-size: 24px; margin-bottom:4px; }
+.type-item:hover { border-color: var(--primary); }
+
+/* Squared map */
+.map-wrapper {
+  border:1px solid var(--light);
+  border-radius: var(--radius);
+  overflow:hidden;
+  margin-bottom: var(--space);
+}
+.minimap {
+  width:100%;
+  aspect-ratio:1/1;
+}
+
+/* Amenities */
+.amenities-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill,minmax(140px,1fr));
+  gap: var(--space);
+}
+.amenity-card {
+  padding: var(--space);
+  background: var(--bg);
+  border:2px solid var(--light);
+  border-radius: var(--radius);
+  text-align: center;
+  cursor: pointer;
+  transition: border-color .2s, background .2s;
+}
+.amenity-card.sel {
+  border-color: var(--primary);
+  background: #fff;
+}
+.amenity-card svg { font-size:24px; margin-bottom:4px; }
+
+/* Photos preview */
+.photos-preview {
+  display:flex; flex-wrap:wrap; gap:8px;
+}
+.photos-preview img {
+  width:100px; height:100px;
+  object-fit:cover;
+  border:1px solid var(--light);
+  border-radius:4px;
+}
+
+/* Navigation */
+.wizard-nav {
+  display:flex; justify-content:flex-end; gap:var(--space);
+}
+.wizard-nav button {
+  padding:10px 20px;
+  border:none; border-radius:var(--radius);
+  cursor:pointer;
+}
+.wizard-nav button:first-child {
+  background: var(--light);
+  color: var(--text);
+}
+.wizard-nav .finish {
+  background: var(--primary);
+  color: #fff;
+}
+.wizard-nav button:hover {
+  opacity:0.9;
+}

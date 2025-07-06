@@ -1,0 +1,103 @@
+.moderator-container {
+  display: flex;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.sidebar {
+  width: 240px;
+  background-color: #2f3542;
+  color: white;
+  padding: 20px;
+  min-height: 100vh;
+}
+
+.mod-info {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.online-indicator {
+  color: #2ed573;
+  margin-left: 8px;
+  font-size: 14px;
+}
+
+.stats p {
+  margin: 10px 0;
+}
+
+.main-content {
+  flex: 1;
+  padding: 30px;
+  background: #f6f6f6;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.controls {
+  display: flex;
+  gap: 10px;
+}
+
+.controls input, .controls select {
+  padding: 6px 10px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+.listings {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.listing-card {
+  display: flex;
+  gap: 20px;
+  padding: 20px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  margin-bottom: 20px;
+  align-items: flex-start;
+}
+
+.image-placeholder {
+  width: 180px;
+  height: 180px;
+  background-color: #ddd;
+  border: 2px dashed #bbb;
+  border-radius: 8px;
+  flex-shrink: 0;
+}
+
+.listing-details h3 {
+  margin-top: 0;
+}
+
+.actions {
+  margin-top: 10px;
+  display: flex;
+  gap: 8px;
+}
+
+.actions button {
+  padding: 6px 12px;
+  font-size: 14px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.actions .approve { background-color: #2ed573; color: white; }
+.actions .reject { background-color: #ff4757; color: white; }
+.actions .detail { background-color: #1e90ff; color: white; }
+.actions .comment { background-color: #ffa502; color: white; }

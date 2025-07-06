@@ -1,0 +1,82 @@
+:root {
+  --header-bg: #ffffff;
+  --accent: #0079c9;
+  --text: #333333;
+  --border: #e0e0e0;
+}
+
+/* Сам блок шапки */
+.app-header {
+  background: var(--header-bg);
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+/* Центрируем и даем padding */
+.app-nav {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0.75rem 1rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+/* Логотип */
+.logo {
+  font-size: 2rem;      /* увеличенный размер */
+  font-weight: 700;
+  color: var(--accent);
+  text-decoration: none;
+}
+
+/* Ссылка-меню */
+.nav-links {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  flex: 1;              /* занять оставшееся место */
+  display: flex;
+}
+.nav-links li {
+  margin-left: 1.5rem;
+}
+.nav-links a {
+  color: var(--text);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color .2s;
+}
+.nav-links a:hover {
+  color: var(--accent);
+}
+
+/* Правый блок с иконками */
+.nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+/* Иконка переключения языка */
+.lang-switch {
+  background: none;
+  border: none;
+  font-size: 1.6rem;    /* побольше */
+  color: var(--text);
+  cursor: pointer;
+  transition: color .2s;
+}
+.lang-switch:hover {
+  color: var(--accent);
+}
+
+/* Иконка профиля */
+.profile-btn {
+  font-size: 1.6rem;    /* побольше */
+  color: var(--text);
+  text-decoration: none;
+  transition: color .2s;
+}
+.profile-btn:hover {
+  color: var(--accent);
+}
